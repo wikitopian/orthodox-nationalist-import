@@ -1,8 +1,8 @@
 <?php
 /*
- * Plugin Name: Batch Job Skeleton Plugin
- * Plugin URI: https://github.com/wikitopian/batch-job-skeleton-plugin
- * Description: Batch Job Skeleton Plugin
+ * Plugin Name: Orthodox Nationalist Import
+ * Plugin URI: https://github.com/wikitopian/orthodox-nationalist-import
+ * Description: Import Podcast Collection
  * Version: 0.1.0
  * Author: @wikitopian
  * Author URI: http://www.github.com/wikitopian
