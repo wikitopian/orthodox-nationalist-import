@@ -3,6 +3,33 @@
 class Batch_Job_Skeleton_Plugin_Operation {
 	public function __construct() {
 
+		$args = array(
+			'author' => 23514,
+			'posts_per_page' => 200,
+		);
+
+		$mrj = get_posts( $args );
+
+		foreach( $mrj as $podcast ) {
+
+			$search = '/\[embed]http:\/\/cdn\.tradyouth\.org\/uploads\/2014\/06\/(.+)\[\/embed]/';
+			$replace = '[embed]http://cdn.tradyouth.org/uploads/the-orthodox-nationalist/\1[/embed]';
+
+			$content = preg_replace( $search, $replace, $podcast->post_content );
+
+			echo $content;
+
+			/*
+			wp_update_post(
+				array(
+					'ID' => $podcast->ID,
+					'post_content' => $content,
+				)
+			);
+			*/
+
+		}
+
 	}
 	public function imported() {
 
